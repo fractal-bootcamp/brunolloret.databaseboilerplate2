@@ -1,5 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
 import About from './about'
+import EqualZero from './EqualZero'
+import LearningToLearn from "./LearningToLearn";
+import BabylonianTalmud from "./BabylonianTalmud";
+import TheNewestTestament from "./TheNewestTestament";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,25 +19,33 @@ const Header = () => {
   return(
 
 <header>
-  <div>
+  
+  <nav>
     <div>
-      <h1>Bruno's site</h1>
+      <div className='font-serif '>
+        <h1 style={{color: "black"}}>Bruno's site</h1>
+      </div>
+      
     </div>
-    
-  </div>
-    
-    <nav>
+  </nav>
+    <div className='font-serif'>
           <p>
           I am Bruno Lloret — a writer, researcher, teacher, and into CS stuff. 
           </p>
         <ul>
-        <li>
-          <a href='/projects/'>
-            Current projects
-          </a>
-        </li>
+          <div className= ''>
+              <li>
+                <a href='/projects/'>
+                  Current projects
+                </a>
+                {/* <li><a href='/EqualZero/'><EqualZero /></a></li>
+                <li><a href='/BabylonianTalmud/'><BabylonianTalmud /></a></li>
+                <li><a href='/TheNewestTestament/'><TheNewestTestament /></a></li>
+                <li><a href='LearningToLearn/'><LearningToLearn /></a></li> */}
+              </li>
+        </div>
           <li>
-            <a href='/links/'>
+            <a>
               You can find me on
             </a>
               <ul>
@@ -56,7 +68,7 @@ const Header = () => {
               </a>
             </li>
         </ul>
-    </nav>
+    </div>
   </header>
 
   )
